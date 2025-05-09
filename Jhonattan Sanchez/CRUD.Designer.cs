@@ -35,6 +35,11 @@
             btneditar = new Button();
             btneliminar = new Button();
             btnsalir = new Button();
+            Codigo = new DataGridViewTextBoxColumn();
+            Nombre = new DataGridViewTextBoxColumn();
+            Apellido = new DataGridViewTextBoxColumn();
+            Telefono = new DataGridViewTextBoxColumn();
+            Direccion = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dtg1).BeginInit();
             SuspendLayout();
             // 
@@ -59,16 +64,17 @@
             // dtg1
             // 
             dtg1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtg1.Location = new Point(102, 149);
+            dtg1.Columns.AddRange(new DataGridViewColumn[] { Codigo, Nombre, Apellido, Telefono, Direccion });
+            dtg1.Location = new Point(26, 149);
             dtg1.Margin = new Padding(3, 4, 3, 4);
             dtg1.Name = "dtg1";
             dtg1.RowHeadersWidth = 51;
-            dtg1.Size = new Size(512, 237);
+            dtg1.Size = new Size(687, 237);
             dtg1.TabIndex = 2;
             // 
             // btnagregar
             // 
-            btnagregar.Location = new Point(704, 73);
+            btnagregar.Location = new Point(752, 73);
             btnagregar.Margin = new Padding(3, 4, 3, 4);
             btnagregar.Name = "btnagregar";
             btnagregar.Size = new Size(86, 31);
@@ -79,7 +85,7 @@
             // 
             // btneditar
             // 
-            btneditar.Location = new Point(707, 132);
+            btneditar.Location = new Point(752, 127);
             btneditar.Margin = new Padding(3, 4, 3, 4);
             btneditar.Name = "btneditar";
             btneditar.Size = new Size(86, 31);
@@ -90,7 +96,7 @@
             // 
             // btneliminar
             // 
-            btneliminar.Location = new Point(719, 203);
+            btneliminar.Location = new Point(752, 196);
             btneliminar.Margin = new Padding(3, 4, 3, 4);
             btneliminar.Name = "btneliminar";
             btneliminar.Size = new Size(86, 31);
@@ -101,14 +107,49 @@
             // 
             // btnsalir
             // 
-            btnsalir.Location = new Point(719, 283);
+            btnsalir.Location = new Point(752, 283);
             btnsalir.Margin = new Padding(3, 4, 3, 4);
             btnsalir.Name = "btnsalir";
             btnsalir.Size = new Size(86, 31);
             btnsalir.TabIndex = 6;
-            btnsalir.Text = "button1";
+            btnsalir.Text = "CERRAR";
             btnsalir.UseVisualStyleBackColor = true;
             btnsalir.Click += btnsalir_Click;
+            // 
+            // Codigo
+            // 
+            Codigo.HeaderText = "Codigo";
+            Codigo.MinimumWidth = 6;
+            Codigo.Name = "Codigo";
+            Codigo.Width = 125;
+            // 
+            // Nombre
+            // 
+            Nombre.HeaderText = "Nombre";
+            Nombre.MinimumWidth = 6;
+            Nombre.Name = "Nombre";
+            Nombre.Width = 125;
+            // 
+            // Apellido
+            // 
+            Apellido.HeaderText = "Apellido";
+            Apellido.MinimumWidth = 6;
+            Apellido.Name = "Apellido";
+            Apellido.Width = 125;
+            // 
+            // Telefono
+            // 
+            Telefono.HeaderText = "Telefono";
+            Telefono.MinimumWidth = 6;
+            Telefono.Name = "Telefono";
+            Telefono.Width = 125;
+            // 
+            // Direccion
+            // 
+            Direccion.HeaderText = "Direccion";
+            Direccion.MinimumWidth = 6;
+            Direccion.Name = "Direccion";
+            Direccion.Width = 125;
             // 
             // CRUD
             // 
@@ -139,5 +180,10 @@
         private Button btneditar;
         private Button btneliminar;
         private Button btnsalir;
+        private DataGridViewTextBoxColumn Codigo;
+        private DataGridViewTextBoxColumn Nombre;
+        private DataGridViewTextBoxColumn Apellido;
+        private DataGridViewTextBoxColumn Telefono;
+        private DataGridViewTextBoxColumn Direccion;
     }
 }
