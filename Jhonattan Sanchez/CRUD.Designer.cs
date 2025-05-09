@@ -41,68 +41,80 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(89, 41);
+            label1.Location = new Point(102, 55);
             label1.Name = "label1";
-            label1.Size = new Size(51, 15);
+            label1.Size = new Size(64, 20);
             label1.TabIndex = 0;
             label1.Text = "BUSCAR";
             // 
             // Textbox
             // 
-            Textbox.Location = new Point(164, 38);
+            Textbox.Location = new Point(187, 51);
+            Textbox.Margin = new Padding(3, 4, 3, 4);
             Textbox.Name = "Textbox";
-            Textbox.Size = new Size(100, 23);
+            Textbox.Size = new Size(114, 27);
             Textbox.TabIndex = 1;
+            Textbox.TextChanged += Textbox_TextChanged;
             // 
             // dtg1
             // 
             dtg1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtg1.Location = new Point(89, 112);
+            dtg1.Location = new Point(102, 149);
+            dtg1.Margin = new Padding(3, 4, 3, 4);
             dtg1.Name = "dtg1";
-            dtg1.Size = new Size(448, 178);
+            dtg1.RowHeadersWidth = 51;
+            dtg1.Size = new Size(512, 237);
             dtg1.TabIndex = 2;
             // 
             // btnagregar
             // 
-            btnagregar.Location = new Point(616, 55);
+            btnagregar.Location = new Point(704, 73);
+            btnagregar.Margin = new Padding(3, 4, 3, 4);
             btnagregar.Name = "btnagregar";
-            btnagregar.Size = new Size(75, 23);
+            btnagregar.Size = new Size(86, 31);
             btnagregar.TabIndex = 3;
             btnagregar.Text = "AGREGAR";
             btnagregar.UseVisualStyleBackColor = true;
+            btnagregar.Click += btnagregar_Click;
             // 
             // btneditar
             // 
-            btneditar.Location = new Point(619, 99);
+            btneditar.Location = new Point(707, 132);
+            btneditar.Margin = new Padding(3, 4, 3, 4);
             btneditar.Name = "btneditar";
-            btneditar.Size = new Size(75, 23);
+            btneditar.Size = new Size(86, 31);
             btneditar.TabIndex = 4;
             btneditar.Text = "EDITAR";
             btneditar.UseVisualStyleBackColor = true;
+            btneditar.Click += btneditar_Click;
             // 
             // btneliminar
             // 
-            btneliminar.Location = new Point(629, 152);
+            btneliminar.Location = new Point(719, 203);
+            btneliminar.Margin = new Padding(3, 4, 3, 4);
             btneliminar.Name = "btneliminar";
-            btneliminar.Size = new Size(75, 23);
+            btneliminar.Size = new Size(86, 31);
             btneliminar.TabIndex = 5;
             btneliminar.Text = "ELIMINAR";
             btneliminar.UseVisualStyleBackColor = true;
+            btneliminar.Click += btneliminar_Click;
             // 
             // btnsalir
             // 
-            btnsalir.Location = new Point(629, 212);
+            btnsalir.Location = new Point(719, 283);
+            btnsalir.Margin = new Padding(3, 4, 3, 4);
             btnsalir.Name = "btnsalir";
-            btnsalir.Size = new Size(75, 23);
+            btnsalir.Size = new Size(86, 31);
             btnsalir.TabIndex = 6;
             btnsalir.Text = "button1";
             btnsalir.UseVisualStyleBackColor = true;
+            btnsalir.Click += btnsalir_Click;
             // 
             // CRUD
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
             Controls.Add(btnsalir);
             Controls.Add(btneliminar);
             Controls.Add(btneditar);
@@ -110,6 +122,7 @@
             Controls.Add(dtg1);
             Controls.Add(Textbox);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "CRUD";
             Text = "CRUD";
             ((System.ComponentModel.ISupportInitialize)dtg1).EndInit();
